@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+ html{
+    scroll-behavior: smooth;
+ }
+
+.intro{
+    text-align: center;
+    color: white;
+    background-color: #282828;
+    top: 0px;
+}
+header{
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 40px;
+}
+.res{
+    text-align: right;
+    margin-left: 800px;
+    font-size: larger;
+}
+.navbar{
+    text-align: center;
+    background-color:#030303 ; 
+    position: sticky;
+    top: 0px;
+
+}
+nav{
+    padding: 12px;
+    
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+}
+.home,.about,.edu,.skills,.Projects{
+    height: 60vh;
+    display: flex;
+}
+
+.abt h1{
+    text-align: center;
+    padding-top: 30px;  
+}
+.abt p{
+    text-align: justify;
+    padding: 30px;
+    font-size:x-large;
+}
+
+.Education h1{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.clg p{
+    text-align: justify;
+    padding: 30px;
+    font-size:x-large;
+}
+.hsc p{
+    text-align: justify;
+    padding: 30px;
+    font-size:x-large;
+}
+.sslc p{
+    text-align: justify;
+    padding: 30px;
+    font-size:x-large;
+}
+
+.Skills h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.tech{
+    text-align:center;
+    margin-right: 600px;
+    padding: 30px;
+    font-size:x-large;
+}
+.tool{
+     text-align:center;
+     margin-right: 600px;
+    padding: 30px;
+    font-size:x-large;
+}
+.soft{
+    text-align: center;
+    margin-right: 600px;
+    padding: 30px;
+    font-size:x-large;
+}
+ul{
+    text-align: justify;
+    margin-left:500px;
+}
+
+.pro h1{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* .home{
+    background-color: #A9A9A9;
+} */
+.about{
+    background-color: whitesmoke;
+}
+.edu{
+    background-color: white;
+}
+.Skills{
+    background-color: whitesmoke;
+}
+.Projects{
+    background-color: white;
+}
+
+.footer {
+    background-color: #030303;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ff4d4d;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+}
