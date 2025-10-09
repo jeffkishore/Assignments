@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <link rel="stylesheet" href="task1.css">
+<style>
+    .internal{
+        background-color: chocolate;
+        text-align: justify;
+        font-size: x-large;
+        padding: 50px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: black;
+    }
+
+    .in{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Inline CSS</h1>
+
+    <p style="background-color: chartreuse; text-align: justify; font-size: x-large; padding: 50px;  border-width: 10px; border-style: solid; border-color: rgb(0, 0, 0); ">Inline CSS is a method of applying styles directly to an individual HTML element using the style attribute 
+        within the tag itself. It allows developers to quickly change the appearance of a specific element without
+        affecting others on the page. For example, you can change the text color, background, or font size 
+        directly inside a tag. Although inline CSS is useful for small changes or testing, it is not recommended
+     for large projects because it mixes style with structure, making the code harder to maintain and update.</p>
+
+    <h1 class="in">Internal CSS</h1>
+    <p class="internal">Internal CSS is a method of applying styles to HTML elements by writing CSS rules inside a &lt;style&gt; tag within 
+    the &lt;head&gt; section of an HTML document. It allows you to style multiple elements on a single page without using
+         an external CSS file. Internal CSS is useful when you want all styles for a particular page to be 
+         contained in one file, making it easy to manage and test. However, it is not ideal for styling multiple
+          pages, because the styles are limited to that single HTML file.</p>
+
+    <h1 class="ex">External CSS</h1>
+    <p class="external">External CSS is a method of applying styles to HTML elements by writing the CSS rules in a separate .css file,
+         which is then linked to the HTML document using the &lt;link&gt; tag in the &lt;head&gt; section. 
+            This approach allows multiple HTML pages to share the same CSS file, making it easier to maintain
+             a consistent design across a website. External CSS is ideal for larger websites because it keeps
+              the HTML and CSS separate, improving readability, organization, and maintainability of the code.</p>
+</body>
+</html>

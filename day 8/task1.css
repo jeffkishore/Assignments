@@ -1,0 +1,77 @@
+.ex{
+    text-align: center;
+}
+
+.external{
+    background-color: aqua;
+        text-align: justify;
+        font-size: x-large;
+        padding: 50px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: black;
+}
+
+.selector{
+    text-align: justify;
+    background-color: aqua;
+    font-size: xx-large;
+    padding: 30px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+}
+
+.type{
+    text-align: justify;
+    background-color: aqua;
+    font-size: xx-large;
+    padding: 30px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+}
+
+
+input[type="text"]{
+    background-color: aqua;
+}
+
+input[type="email"]{
+    background-color: chartreuse;
+}
+
+input::placeholder{
+    color: black;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.class{
+    text-align: justify;
+    background-color: aqua;
+    font-size: x-large;
+    padding: 50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+}
+
+#selector{
+    text-align: justify;
+    background-color: rgb(255, 132, 0);
+    font-size: x-large;
+    padding: 50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+}
+
+h1,h2,h3,h4,h5{
+    color: blue;
+    text-align: center;
+}
+
+

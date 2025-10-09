@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            background-color: chartreuse;
+        }
+
+        input[type="password"]{
+            background-color: aqua;
+        }
+        P{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute Selectors</h1>
+    <p>In CSS, attribute selectors allow you to target and style HTML elements based on the presence or value of their attributes.
+        For example, you can style all input fields with a specific type such as text or password, or target elements that have a certain 
+        title or href attribute. Attribute selectors are useful for applying styles selectively without adding extra classes or IDs, making
+        your code cleaner and more flexible. They provide a powerful way to control the appearance of elements based on their attributes.</p>
+
+       <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>
