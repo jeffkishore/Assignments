@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Buttons with Space-Evenly</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 40px;
+  }
+
+  .button-container{
+    display: flex;                   
+    justify-content: space-evenly;    
+    align-items: center;              
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Buttons Aligned with Space-Evenly</h1>
+
+  <div class="button-container">
+    <button>Home</button>
+    <button>About</button>
+    <button>Services</button>
+    <button>Contact</button>
+  </div>
+
+</body>
+</html>

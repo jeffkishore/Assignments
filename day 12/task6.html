@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive 3-Column Layout</title>
+<style>
+ 
+
+  .container {
+    display: flex;                 
+    justify-content: space-between;
+    flex-wrap: wrap;               
+    gap: 20px;                    
+  }
+
+  .box {
+    background-color: #4CAF50;
+    color: white;
+    flex: 1;                      
+    min-width: 250px;             
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .box:hover{
+transform: translateY(5px);
+  }
+  
+
+</style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Responsive 3-Column Layout</h1>
+
+  <div class="container">
+   
+  <div class="box">Column 1</div>
+  <div class="box">Column 2</div>
+  <div class="box">Column 3</div>
+    
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        .box{
+            border: 2px solid chartreuse;
+            padding: 5px;
+            background-color:aqua;
+
+
+        }
+        .block{
+            display:block;
+            /* height: 30px;
+            width: 100px; */
+            border: 5px solid rgb(230, 16, 116);
+            margin: 30px;
+            padding: 5px;
+
+        }
+        .inline{
+            display: inline;
+            border: 5px solid palegoldenrod;
+            margin: 30px;
+
+        }
+        .inlineblock{
+            display: inline-block;
+            height: 30px;
+            width: 100px;
+            border: 5px solid palegoldenrod;
+            margin: 30px;
+        }
+
+        .boxnone{
+            display: none;
+            
+        }
+
+        .boxflex{
+            display: flex;
+            gap: 10px;
+            height: 30px;
+            width: 250px;
+            border: 5px solid rgb(21, 219, 7);
+            margin: 30px;
+            padding: 5px
+        }
+        .boxgrid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 400px;
+            margin: 30px;
+            border: 5px solid rgb(21, 219, 7);
+            padding: 5px;
+            
+
+        }
+        .boxinlineflex{
+            display: inline-flex;
+            gap: 10px;
+            margin: 30px;
+            border: 5px solid rgb(21, 219, 7);
+            padding: 5px;
+
+        }
+        .boxinlinegrid{
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px;
+            margin: 30px;
+            border: 5px solid rgb(21, 219, 7);
+            padding: 5px;
+        }
+
+        h1{
+           text-align: center; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Experiment with All Display Properties</h1>
+
+    <h2>Display : Block</h2>
+    <div class="block">Block 1</div>
+    <div class="block">Block 2</div>
+    <p>Blocks start on a new line and take full width</p>
+
+    <h2>Display : inline</h2>
+    <div class="inline">Inline  1</div>
+    <div class="inline">Inline  2</div>
+    <p>Inline stay in the same line, ignoring width/height</p>
+
+    <h2>Display : inline block</h2>
+    <div class="inlineblock">inline block 1</div>
+    <div class="inlineblock">inline block 2</div>
+    <p>Inline blocks stay in the same line but respect width/height</p>
+
+    <h2>Display : None</h2>
+    <div class="boxnone">None</div>
+    <p>Elements with display none are not visible and take no space.</p>
+
+    <h2>Display : flex</h2>
+    <div class="boxflex">
+    <div class="box">Item 1</div>
+    <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+    </div>
+    <p>Flexbox arranges items in a row (by default).</p>
+
+    <h2>Display : grid</h2>
+    <div class="boxgrid">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    </div>
+    <p>Grid creates rows and columns layout.</p>
+
+    <h2>Display : inline flex</h2>
+    <div class="boxinlineflex">
+    <div class="box">Item 1</div>
+    <div class="box">Item 2</div>
+    </div>
+    <p>Inline-flex stays in line like inline elements but acts like flex inside.</p>
+
+    <h2>Display : inline grid</h2>
+    <div class="boxinlinegrid">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    </div>
+    <p>Inline-grid behaves like inline-block but with grid layout inside.</p>
+</body>
+</html>
