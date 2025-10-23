@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hero Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero {
+      height: 100vh; 
+      width: 100vw;  
+      background: linear-gradient(135deg, #6a11cb, #2575fc); 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding:0 5vw;
+    }
+
+    .hero h1 {
+      font-size: 5vw;
+      margin-bottom: 2vh;
+    }
+
+    .hero p {
+      font-size: 2vw;
+      margin-bottom: 4vh;
+      max-width: 60vw;
+    }
+
+    .hero button {
+      padding: 1.5vh 3vw;
+      font-size: 1.5vw;
+      background-color: white;
+      color: #2575fc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 8vw;
+      }
+      .hero p {
+        font-size: 4vw;
+      }
+      .hero button {
+        font-size: 3vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Crafting beautiful and responsive web experiences that adapt perfectly to any screen size.</p>
+    <button>Explore More</button>
+  </section>
+
+</body>
+</html>

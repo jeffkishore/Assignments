@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="icon" href="images/nn.png" type="image/png">
+  
+  <style>
+ 
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 24px;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 600;
+    }
+
+    /* ---------- Intro Section ---------- */
+    .intro {
+      background-color: #282828;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .intro h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro h5 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .intro .res {
+      padding: 10px 25px;
+      font-size: 16px;
+      background-color: #1e90ff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ---------- Navbar ---------- */
+    .navbar {
+      background-color: #030303;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .navbar nav a {
+      margin: 8px 15px;
+      font-weight: 600;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: #1e90ff;
+    }
+
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .about, .Skills, .Projects {
+      background-color: whitesmoke;
+    }
+
+    .edu {
+      background-color: white;
+    }
+
+    section h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+
+    .Skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .Skills ul li {
+      margin: 5px 20px;
+      font-size: 16px;
+    }
+
+  
+    .footer {
+      background-color: #030303;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer a {
+      color: #ff4d4d;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+  
+
+    /* Tablets */
+    @media (min-width: 600px) {
+      .intro h1 { font-size: 36px; }
+      .intro h5 { font-size: 20px; }
+      .intro .res { font-size: 18px; padding: 12px 28px; }
+
+      section h1 { font-size: 32px; }
+      section p, .Skills ul li { font-size: 18px; }
+    }
+
+    /* Small desktops */
+    @media (min-width: 768px) {
+      .intro h1 { font-size: 40px; }
+      .intro h5 { font-size: 22px; }
+      .intro .res { font-size: 18px; padding: 12px 30px; }
+
+      section h1 { font-size: 36px; }
+      section p, .Skills ul li { font-size: 18px; }
+    }
+
+    /* Large desktops */
+    @media (min-width: 992px) {
+      .intro h1 { font-size: 48px; }
+      .intro h5 { font-size: 24px; }
+      .intro .res { font-size: 20px; padding: 15px 35px; }
+
+      section h1 { font-size: 40px; }
+      section p, .Skills ul li { font-size: 20px; }
+
+    
+    }
+  </style>
+</head>
+<body>
+
+  <section class="intro">
+    <h1>Kishore Kumar U R</h1>
+    <h5>WEB Developer | Coder | Designer</h5>
+    <a href="images/resume.png" target="_blank">
+      <button class="res">Resume</button>
+    </a>
+  </section>
+
+  <div class="navbar">
+    <nav>
+      <a href="#About">Home</a>
+      <a href="#About">About</a>
+      <a href="#Education">Education</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Contact">Contact</a>
+    </nav>
+  </div>
+
+
+  <section class="about" id="About">
+    <h1>About Me</h1>
+    <p>
+      I am a curious mind navigating the digital frontier, someone who believes that technology is not just a tool, but an extension of human imagination. I see the world not as it is, but as what it could become when creativity merges with code...
+    </p>
+  </section>
+
+
+  <section class="edu" id="Education">
+    <h1>Education</h1>
+    <p>🎓 Bachelor of Engineering in Mechanical and Automation Engineering, Sri Sairam Engineering College, Chennai (2021 – 2025) CGPA: 8.5/10</p>
+    <p>🏫 Higher Secondary (Class 12th), Valluvar Gurukulam Higher Secondary School, Chennai (2019 – 2021) Percentage: 90%</p>
+    <p>📘 Secondary School (Class 10th), Jans Matriculation School, Chennai (2018 – 2019) Percentage: 92%</p>
+  </section>
+
+  
+  <section class="Skills" id="Skills">
+    <h1>Skills</h1>
+    <p>💻 Technical Skills</p>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>React.js, Node.js (Basics)</li>
+      <li>C, C++, Java, Python</li>
+      <li>SQL & Database Management</li>
+    </ul>
+    <p>🛠 Tools & Technologies</p>
+    <ul>
+      <li>Git & GitHub</li>
+      <li>VS Code, Eclipse, IntelliJ</li>
+      <li>Figma (UI/UX basics)</li>
+    </ul>
+    <p>🤝 Soft Skills</p>
+    <ul>
+      <li>Problem Solving</li>
+      <li>Communication & Teamwork</li>
+      <li>Adaptability</li>
+      <li>Time Management</li>
+    </ul>
+  </section>
+
+  
+  <section class="Projects" id="Projects">
+    <h1>Projects</h1>
+    <p>🛒 E-Commerce Website (Mini Project): Built with React.js and Node.js + MySQL. Features: Product listing, shopping cart, checkout.</p>
+    <p>📊 Student Management System: CRUD app using Java and MySQL. Features: Add, update, delete, search student records.</p>
+    <p>🤖 Chatbot (Basic AI Project): Simple Python chatbot using NLTK. Features: Basic Q&A responses.</p>
+  </section>
+
+  
+  <footer class="footer" id="Contact">
+    <p>© 2025 Kishore Kumar | All Rights Reserved</p>
+    <a href="https://github.com/jeffkishore" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/kishore220304" target="_blank">LinkedIn</a>
+    <a href="mailto:jeffkishore19@gmail.com">Email</a>
+  </footer>
+
+</body>
+</html>

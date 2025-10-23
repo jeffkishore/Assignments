@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box{
+        border: 2px solid chartreuse;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px;
+        flex: 1;
+    }
+
+    @media (min-width:750px){
+        .container{
+        flex-direction:row;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Responsive Flexbox Layout</h1>
+    <div class="container">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+    </div>
+</body>
+</html>

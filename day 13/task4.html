@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Layout using vh & vw</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      width: 100vw;   
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #1e90ff, #ff7f50);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0.5em;
+    }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 600px;
+    }
+
+  
+    section:nth-of-type(2) {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    section:nth-of-type(3)
+{
+  background: linear-gradient(90deg, #ff7f50, #6a11cb,#fbc2eb, #a6c1ee);
+}  </style>
+</head>
+<body>
+  <section>
+    <h1>Welcome to Full Screen Section</h1>
+    <p>This section takes up the entire viewport using 100vh and 100vw units.</p>
+  </section>
+
+  <section>
+    <h1>Next Section</h1>
+    <p>Scroll down.</p>
+  </section>
+
+  <section>
+    <h1>Next Section</h1>
+    <p>Thats it !!!.</p>
+  </section>
+</body>
+</html>

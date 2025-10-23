@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <style>
+        html{
+            font-size:16px;
+        }
+
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+
+        .container{
+            display: flex;
+            gap: 50px;
+            margin: 100px;
+        }
+
+        .rembox{
+            border: 0.15rem solid blue;
+            padding: 1rem;
+            width: 15rem;
+        }
+
+        .rembox h2{
+            font-size: 1.5rem;
+        }
+
+        .rembox p{
+            font-size: 1rem;
+        }
+
+         .embox{
+            border: 0.15em solid rgb(173, 44, 121);
+            padding: 1em;
+            width: 15em;
+        }
+
+        .embox h2{
+            font-size: 1.5em;
+        }
+
+        .in{
+            font-size: 1.25em;
+        }
+
+        .in p{
+            font-size: 0.875em;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+  <h1>Comparing em and rem Units</h1>
+
+  <div class="container">
+    <div class="rembox">
+      <h2>Using rem</h2>
+      <p>All font sizes are based on the root (HTML) font size — 16px.</p>
+    </div>
+
+    <div class="embox">
+      <h2>Using em</h2>
+      <div class="in">
+        <p>Font sizes depend on the parent element. This text is slightly larger because it compounds from the parent font size.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
