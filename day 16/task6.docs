@@ -1,0 +1,43 @@
+JavaScript (JS) is a high-level, interpreted programming language used to make web pages interactive.
+
+It was created in 1995 by Brendan Eich at Netscape in just 10 days.
+
+JavaScript runs in the browser (client-side) but can also run on servers using Node.js.
+
+JS is a loosely typed or dynamically typed language — you don’t need to specify variable types.
+
+Variables can be declared using var, let, or const.
+
+JS has primitive data types: String, Number, Boolean, Null, Undefined, Symbol, and BigInt.
+Objects and Arrays are complex data types used to store multiple values.
+
+You can perform arithmetic, comparison, and logical operations easily with built-in operators.
+
+JavaScript automatically performs type conversion (type coercion) in certain operations.
+
+Template literals (using backticks `) allow embedding variables inside strings like:
+console.log(`Hello, ${name}!`);
+
+Functions can be written in three ways:
+Function declaration
+Function expression
+Arrow function (() => {})
+
+Functions can return values and even be passed as arguments — making JS support higher-order functions.
+
+Conditional statements (if, else, switch) and loops (for, while, do...while) control program flow.
+
+JavaScript supports closures, allowing functions to remember variables from their parent scope.
+
+JavaScript manipulates web pages using the Document Object Model (DOM) with methods like
+getElementById() and querySelector().
+
+It responds to events like click, mouseover, or keydown to create interactivity.
+
+addEventListener() is the modern way to handle multiple event actions without conflicts.
+
+JS supports asynchronous programming through callbacks, Promises, and async/await.
+
+Modern JS (ES6 and later) includes classes, modules, destructuring, spread/rest operators, and more.
+
+JavaScript is now used everywhere — web, mobile, desktop, and even IoT — thanks to frameworks like React, Angular, Node.js, and Electron.
