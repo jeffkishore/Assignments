@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            color:black;
+            position: absolute;
+            animation: moveOneWay 8s linear infinite;
+            font-size: 30px;
+
+        }
+
+        @keyframes moveOneWay{
+            from{
+                left: -200px;
+            }
+            to{
+                left: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div><bold>HeHe HeHeHe</bold></div>
+</body>
+</html>

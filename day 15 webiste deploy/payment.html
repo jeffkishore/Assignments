@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .screen {
+      background-color: #ccc;
+      height: 30px;
+      border-radius: 5px;
+      margin: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .seats {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .seat {
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + label {
+      background-color: #007bff;
+    }
+
+    label.seat {
+      display: inline-block;
+    }
+
+    .payment {
+      margin-top: 30px;
+    }
+
+    .payment input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🎬 Select Your Seats</h2>
+
+    <div class="screen">SCREEN</div>
+
+    <div class="seats">
+      
+      <input type="checkbox" id="s1"><label for="s1" class="seat"></label>
+      <input type="checkbox" id="s2"><label for="s2" class="seat"></label>
+      <input type="checkbox" id="s3"><label for="s3" class="seat"></label>
+      <input type="checkbox" id="s4"><label for="s4" class="seat"></label>
+      <input type="checkbox" id="s5"><label for="s5" class="seat"></label>
+      <input type="checkbox" id="s6"><label for="s6" class="seat"></label>
+
+    
+      <input type="checkbox" id="s7"><label for="s7" class="seat"></label>
+      <input type="checkbox" id="s8"><label for="s8" class="seat"></label>
+      <input type="checkbox" id="s9"><label for="s9" class="seat"></label>
+      <input type="checkbox" id="s10"><label for="s10" class="seat"></label>
+      <input type="checkbox" id="s11"><label for="s11" class="seat"></label>
+      <input type="checkbox" id="s12"><label for="s12" class="seat"></label>
+    </div>
+
+    <div class="payment">
+      <h3>💳 Payment Details</h3>
+      <form action="last.html" method="get">
+        <input type="text" placeholder="Cardholder Name" required>
+        <input type="text" placeholder="Card Number" maxlength="19" required>
+        <input type="text" placeholder="MM/YY" maxlength="5" required>
+        <input type="password" placeholder="CVV" maxlength="3" required>
+       <button type="submit" class="btn">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
