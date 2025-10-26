@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar Animation</title>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+}
+.progress-container {
+  width: 300px;
+  height: 25px;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: rgb(73, 7, 59);
+  border-radius: 12px;
+  animation: fill 3s ease-in-out forwards;
+}
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+</body>
+</html>
