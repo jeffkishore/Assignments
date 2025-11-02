@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Products</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <ul id="productList"></ul>
+
+    <script>
+        // Step 1: Create an array of products
+        let products = ["Laptop", "Smartphone", "Headphones", "Keyboard", "Mouse"];
+
+        // Step 2: Get the HTML element where you want to display products
+        let list = document.getElementById("productList");
+
+        // Step 3: Use forEach() to loop through and display each product
+        products.forEach(function(product) {
+            let li = document.createElement("li");  // create list item
+            li.textContent = product;               // set its text
+            list.appendChild(li);                   // add to the UL
+        });
+    </script>
+</body>
+</html>
