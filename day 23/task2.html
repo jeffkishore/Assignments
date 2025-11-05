@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chnge clr txt</title>
+</head>
+<body>
+    <p id="para" >Change clr</p>
+    <button onclick="changecolor()">Change clr</button>
+
+    <script>
+        function changecolor(){
+            document.getElementById("para").textContent = "Color changed to red!";
+            document.querySelector("#para").style.color = "red";
+            
+        }
+    </script>
+</body>
+</html>

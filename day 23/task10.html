@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML Example</title>
+</head>
+<body>
+  <h2>Dynamic HTML Insertion</h2>
+  <button onclick="addText()">Click to Insert Text</button>
+  <div id="output"></div>
+
+  <script>
+    function addText() {
+      document.getElementById("output").innerHTML =
+        "This is <b>bold</b> and this is <i>italic</i> text added using <b>innerHTML</b>.";
+    }
+  </script>
+</body>
+</html>

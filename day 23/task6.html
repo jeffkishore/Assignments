@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+</head>
+<body id="page" style="background-color: white; color: black;">
+  <h1>Welcome to My Page</h1>
+  <p>Click the button to toggle Dark Mode!</p>
+  <button onclick="toggleDarkMode()">Dark Mode</button>
+
+  <script>
+    function toggleDarkMode() {
+      let page = document.getElementById("page");
+      if (page.style.backgroundColor === "black") {
+        page.style.backgroundColor = "white";
+        page.style.color = "black";
+      } else {
+        page.style.backgroundColor = "black";
+        page.style.color = "white";
+      }
+    }
+  </script>
+</body>
+</html>

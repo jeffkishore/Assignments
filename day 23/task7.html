@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Input Update</title>
+</head>
+<body>
+  <h2>Type below:</h2>
+  <input id="textInput" type="text" placeholder="Start typing..." />
+  <p>Live output:</p>
+  <div id="live" aria-live="polite"></div>
+  <script>
+    document.getElementById('textInput').addEventListener('input', function (e) {
+      document.getElementById('live').textContent = e.target.value;
+    });
+  </script>
+</body>
+</html>

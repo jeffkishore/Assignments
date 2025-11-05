@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove First List Item</title>
+</head>
+<body>
+  <ul id="Fav Movies">
+    <li>Teen wolf</li>
+    <li>Darling</li>
+    <li>Coolie(flash back only)</li>
+  </ul>
+
+  <button onclick="removefirstitem()">Remove First Item</button>
+
+  <script>
+    function removefirstitem() {
+      let list = document.getElementById("Fav Movies");          // select <ul>
+      let firstitem = list.firstElementChild;               // get first <li>
+      if (firstitem) {
+        list.removeChild(firstitem);                        // remove it
+      }
+    }
+  </script>
+</body>
+</html>

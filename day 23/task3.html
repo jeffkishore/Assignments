@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add List Items Dynamically</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Existing Item</li>
+  </ul>
+
+  <button onclick="addItems()">Add 3 Items</button>
+
+  <script>
+    function addItems() {
+      let list = document.getElementById("myList"); // select <ul>
+
+      // Array of new items
+      let newItems = ["Apple", "Banana", "Cherry"];
+
+      // Loop through array and add each item
+      newItems.forEach(function(itemText) {
+        let li = document.createElement("li");      // create <li>
+        li.textContent = itemText;                  // set text
+        list.appendChild(li);                       // add to <ul>
+      });
+    }
+  </script>
+</body>
+</html>

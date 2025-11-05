@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Buttons</title>
+</head>
+<body id="page" style="text-align:center; padding:50px;">
+  <h2>Click a button to change background color</h2>
+
+  <button id="redBtn">Red</button>
+  <button id="greenBtn">Green</button>
+  <button id="blueBtn">Blue</button>
+
+  <script>
+    let page = document.getElementById("page");
+
+    document.getElementById("redBtn").addEventListener("click", function() {
+      page.style.backgroundColor = "red";
+    });
+
+    document.getElementById("greenBtn").addEventListener("click", function() {
+      page.style.backgroundColor = "lightgreen";
+    });
+
+    document.getElementById("blueBtn").addEventListener("click", function() {
+      page.style.backgroundColor = "lightblue";
+    });
+  </script>
+</body>
+</html>
