@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Error Handling</title>
+</head>
+<body>
+  <h2>Input Validation with try...catch...finally</h2>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button id="submitBtn">Submit</button>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", () => {
+      let name = document.getElementById("username").value.trim();
+      let message = document.getElementById("message");
+
+      try {
+        if (name === "") throw new Error("Name field cannot be empty!");
+        if (name.length < 3) throw new Error("Name must be at least 3 characters!");
+        message.textContent = "Validation successful!";
+        message.style.color = "green";
+      } 
+      catch (error) {
+        message.textContent = `Error: ${error.message}`;
+        message.style.color = "red";
+        console.error("Error caught:", error.name, "-", error.message);
+      } 
+      finally {
+        console.log("Validation attempt completed."); // Always runs
+      }
+    });
+  </script>
+</body>
+</html>

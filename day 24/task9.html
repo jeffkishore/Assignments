@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Change</title>
+</head>
+<body>
+    <button id="changeBtn">Change Color</button>
+    <p id="text">Click the button to change my color!</p>
+
+    <script>
+        document.getElementById("changeBtn").addEventListener("click", () => {
+            try {
+                let element = document.getElementById("text");
+                if (!element) throw new Error("Element not found!");
+                element.style.color = "blue";
+            } catch (error) {
+                console.error(error.message);
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

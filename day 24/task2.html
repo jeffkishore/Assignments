@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h3>Type something below </h3>
+  <input type="text" id="in" placeholder="Start typing...">
+  <p>Your text: <span id="display"></span></p>
+
+  <script>
+    let inputBox = document.getElementById("in");
+    let displayText = document.getElementById("display");
+
+    inputBox.addEventListener("input", function()
+     {
+      displayText.textContent = inputBox.value;
+    });
+  </script>
+</body>
+</html>

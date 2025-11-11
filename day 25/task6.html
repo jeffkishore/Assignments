@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throw Example</title>
+</head>
+<body>
+  <input type="number" id="num" placeholder="Enter a number">
+  <button id="checkBtn">Check</button>
+  <p id="result"></p>
+  <script>
+    document.getElementById("checkBtn").addEventListener("click", () => {
+      let value = document.getElementById("num").value;
+      let result = document.getElementById("result");
+      try {
+        if (value === "") throw new Error("Please enter a number!");
+        if (value > 100) throw new Error("Number greater than 100 is not allowed!");
+        result.textContent = "Valid number: " + value;
+        result.style.color = "green";
+      } catch (error) {
+        result.textContent = error.message;
+        result.style.color = "red";
+        console.error(error.message);
+      }
+    });
+  </script>
+</body>
+</html>

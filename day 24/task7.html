@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your name" id="name">
+    <p id="textcount"></p>
+    <script>
+        let entertext = document.getElementById("name")
+        let livetext = document.getElementById("textcount")
+        entertext.addEventListener("input", function () {
+            livetext.textContent = 'Character count: ' + entertext.value.length;
+        });
+    </script>
+</body>
+</html>

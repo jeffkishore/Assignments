@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Calculator</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button id="Calculate">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("Calculate").addEventListener("click", function() {
+            try {
+                let n1 = parseFloat(document.getElementById("num1").value);
+                let n2 = parseFloat(document.getElementById("num2").value);
+                let op = document.getElementById("operator").value;
+                let result;
+
+                if (op === "/" && n2 === 0) {
+                    throw new Error("Division by zero is not allowed");
+                }
+
+                switch (op) {
+                    case "+": result = n1 + n2; break;
+                    case "-": result = n1 - n2; break;
+                    case "*": result = n1 * n2; break;
+                    case "/": result = n1 / n2; break;
+                    default: throw new Error("Invalid operator");
+                }
+
+                document.getElementById("result").textContent = "Result: " + result;
+                alert("Calculation Done!");
+            } 
+            catch (error) {
+                document.getElementById("result").textContent = "Error: " + error.message;
+            } 
+            finally {
+                console.log("Calculation Completed");
+            }
+        });
+    </script>
+</body>
+</html>

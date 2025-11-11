@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Name and Message</title>
+</head>
+<body>
+  <button id="testBtn">Run Test</button>
+  <p id="output"></p>
+
+  <script>
+    document.getElementById("testBtn").addEventListener("click", () => {
+      let output = document.getElementById("output");
+
+      try {
+        // Intentionally throw an error
+        throw new TypeError("This is a custom type error!");
+      } catch (error) {
+        console.error("Error Name:", error.name);
+        console.error("Error Message:", error.message);
+        output.textContent = `Error Name: ${error.name} | Message: ${error.message}`;
+        output.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

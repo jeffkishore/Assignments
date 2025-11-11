@@ -1,0 +1,33 @@
+<!--Create custom error messages for invalid name or email input.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Error</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Enter your username" id="username">
+        <input type="password" placeholder="Enter your password" id="passwordbox">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="errorMsg" style="color:red;"></p>
+    <script>
+        const username = document.getElementById("username");
+        const passwordbox = document.getElementById("passwordbox");
+        const errorMsg = document.getElementById("errorMsg");
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            if (username.value.trim() === "") {
+                errorMsg.textContent = "Please enter your username.";
+            } else if (passwordbox.value.trim() === "") {
+                errorMsg.textContent = "Please enter your password.";
+            } else {
+                errorMsg.textContent = "";
+                alert("Form submitted successfully!");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Check</title>
+</head>
+<body>
+  <h2>Age Verification</h2>
+  <input type="number" id="age" placeholder="Enter your age">
+  <button id="checkBtn">Check Age</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAge(age) {
+      if (isNaN(age) || age === "") throw new Error("Please enter a valid age!");
+      if (age < 18) throw new Error("Access denied — You must be 18 or older!");
+      return "Access granted — Welcome!";
+    }
+
+    document.getElementById("checkBtn").addEventListener("click", () => {
+      let ageInput = document.getElementById("age").value;
+      let result = document.getElementById("result");
+
+      try {
+        let message = checkAge(Number(ageInput));
+        result.textContent = message;
+        result.style.color = "green";
+      } catch (error) {
+        result.textContent = error.message;
+        result.style.color = "red";
+        console.error(error.message);
+      }
+    });
+  </script>
+</body>
+</html>

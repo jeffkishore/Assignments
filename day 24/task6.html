@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="loginform">
+        <input type="text" placeholder="enter your username" id="usertext">
+        <input type="password" placeholder="enter your password" id="Passwodtext">
+        <br>
+        <button type="submit">Save</button>
+    </form>
+    <script>
+        document.getElementById("loginform").addEventListener("submit",function(e){
+            e.preventDefault();
+        try
+        {
+            let text = document.getElementById("usertext").value
+            let password = document.getElementById("Passwodtext").value
+            if (text ==="" || password === ""){
+                throw new Error("All fields are required");
+            }
+            alert("Login Sucessfull");
+        }
+        catch (error) {
+            console.log("Error:", error.message);
+        }
+        finally {
+            console.log("validation completed");
+        }
+        });
+    </script>
+</body>
+</html>
