@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Fade-in</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+section{display:none;padding:40px;margin:20px;background:#f0f0f0;border-radius:10px}
+</style>
+</head>
+<body>
+<section id="about">About Me: I’m a Web Developer!</section>
+<section id="projects">Projects: Gallery, Quiz, Portfolio</section>
+<section id="contact">Contact: email@example.com</section>
+<script>
+$(document).ready(function(){
+$("section").each(function(i){
+$(this).delay(500*i).fadeIn(800);
+});
+});
+</script>
+</body>
+</html>

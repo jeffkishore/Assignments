@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Toggler</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#answer{display:none;margin-top:10px;color:#28a745;font-weight:bold}
+button{padding:10px 20px;background:#ff9800;color:white;border:none;border-radius:5px;cursor:pointer}
+</style>
+</head>
+<body>
+<h3>Question: What does HTML stand for?</h3>
+<button id="showAnswer">Show/Hide Answer</button>
+<p id="answer">HyperText Markup Language</p>
+<script>
+$(document).ready(function(){
+$("#showAnswer").click(function(){
+$("#answer").toggle(300);
+});
+});
+</script>
+</body>
+</html>

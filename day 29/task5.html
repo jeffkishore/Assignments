@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Toggle Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h3>⬇️ jQuery Slide Down / Up Example</h3>
+<button id="slideBtn">Slide Toggle</button>
+<div id="box" style="width:200px;height:100px;background-color:lightcoral;display:none;margin-top:10px;text-align:center;line-height:100px;">
+Hello jQuery!
+</div>
+<script>
+$(document).ready(function(){
+$("#slideBtn").click(function(){
+$("#box").slideToggle();
+});
+});
+</script>
+</body>
+</html>

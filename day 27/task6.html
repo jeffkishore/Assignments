@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Followers</title>
+</head>
+<body>
+  <h2>GitHub Followers Viewer</h2>
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button id="fetchBtn">Show Followers</button>
+
+  <ul id="followersList"></ul>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    document.getElementById("fetchBtn").addEventListener("click", async () => {
+      const username = document.getElementById("username").value.trim();
+      const list = document.getElementById("followersList");
+      const errorMsg = document.getElementById("error");
+      list.innerHTML = "";
+      errorMsg.textContent = "";
+
+      if (!username) {
+        errorMsg.textContent = "Please enter a username!";
+        return;
+      }
+
+      try {
+        let response = await fetch(`https://api.github.com/users/${username}/followers`);
+        if (!response.ok) throw new Error("User not found or network error");
+
+        let followers = await response.json();
+
+        if (followers.length === 0) {
+          list.innerHTML = "<li>No followers found.</li>";
+          return;
+        }
+
+        followers.forEach(follower => {
+          let li = document.createElement("li");
+          li.textContent = follower.login;
+          list.appendChild(li);
+        });
+      } catch (error) {
+        errorMsg.textContent = "Error: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>

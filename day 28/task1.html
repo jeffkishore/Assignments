@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage Example</title>
+</head>
+<body>
+  <h2>🎓 Save Your Info</h2>
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+  <input type="text" id="course" placeholder="Enter your course"><br><br>
+  <button id="saveBtn">Save Info</button>
+
+  <h3 id="output"></h3>
+
+  <script>
+    const nameInput = document.getElementById("name");
+    const courseInput = document.getElementById("course");
+    const output = document.getElementById("output");
+
+    // Display saved info on page load
+    window.onload = () => {
+      const savedName = localStorage.getItem("name");
+      const savedCourse = localStorage.getItem("course");
+      if (savedName && savedCourse) {
+        output.textContent = `Welcome back, ${savedName}! Your course is ${savedCourse}.`;
+      }
+    };
+
+    // Save info when button clicked
+    document.getElementById("saveBtn").addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      const course = courseInput.value.trim();
+
+      if (name && course) {
+        localStorage.setItem("name", name);
+        localStorage.setItem("course", course);
+        output.textContent = `Saved! Welcome, ${name}. You're enrolled in ${course}.`;
+      } else {
+        output.textContent = "⚠️ Please enter both name and course.";
+      }
+    });
+  </script>
+</body>
+</html>

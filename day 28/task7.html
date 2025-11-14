@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save User Location</title>
+</head>
+<body>
+<h3>📍 Your Current Location</h3>
+<button id="getLocationBtn">Get Location</button>
+<button id="saveLocationBtn">Save Location</button>
+<p id="output"></p>
+<script>
+let currentLocation="";
+document.getElementById("getLocationBtn").addEventListener("click",()=>{
+if(navigator.geolocation){
+navigator.geolocation.getCurrentPosition(
+position=>{
+const lat=position.coords.latitude;
+const lon=position.coords.longitude;
+currentLocation=`Latitude: ${lat}, Longitude: ${lon}`;
+document.getElementById("output").textContent=currentLocation;
+},
+()=>{
+document.getElementById("output").textContent="Unable to retrieve location.";
+}
+);
+}else{
+document.getElementById("output").textContent="Geolocation not supported by your browser.";
+}
+});
+document.getElementById("saveLocationBtn").addEventListener("click",()=>{
+if(currentLocation){
+localStorage.setItem("savedLocation",currentLocation);
+document.getElementById("output").textContent=`Saved: ${currentLocation}`;
+}else{
+document.getElementById("output").textContent="Get location first before saving.";
+}
+});
+</script>
+</body>
+</html>

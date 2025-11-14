@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Hide & Show</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h3>🪄 jQuery Hide & Show Example</h3>
+<p id="text">This is a paragraph that can be hidden or shown using jQuery.</p>
+<button id="hideBtn">Hide</button>
+<button id="showBtn">Show</button>
+<script>
+$(document).ready(function(){
+$("#hideBtn").click(function(){$("#text").hide();});
+$("#showBtn").click(function(){$("#text").show();});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Box</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#notify{display:none;background:#28a745;color:white;padding:15px;width:250px;margin:20px auto;border-radius:5px;text-align:center}
+button{padding:10px 20px;background:#007bff;color:white;border:none;border-radius:5px;cursor:pointer}
+</style>
+</head>
+<body>
+<button id="showBtn">Show Notification</button>
+<div id="notify">✅ Action completed successfully!</div>
+<script>
+$(document).ready(function(){
+$("#showBtn").click(function(){
+$("#notify").slideToggle(400);
+});
+});
+</script>
+</body>
+</html>

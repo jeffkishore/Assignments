@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debug This Code Quiz</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f8f9fa;margin-top:40px}
+pre{background:#fff;padding:15px;width:80%;margin:auto;border-radius:8px;text-align:left;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+button{margin-top:15px;padding:10px 20px;border:none;border-radius:5px;background:#007bff;color:white;cursor:pointer}
+button:hover{background:#0056b3}
+#result{margin-top:15px;font-weight:bold}
+</style>
+</head>
+<body>
+<h2>🐞 Debug This Code Quiz</h2>
+<p>Find the bug in this code and guess the correct output:</p>
+<pre id="bugCode">
+// Buggy Code:
+function addNumbers(a, b){
+  return a - b // ❌ Wrong operator
+}
+console.log(addNumbers(5,3))
+</pre>
+<p>What should the correct output be?</p>
+<input type="text" id="answer" placeholder="Enter your answer">
+<button id="checkBtn">Check Answer</button>
+<p id="result"></p>
+<script>
+document.getElementById("checkBtn").addEventListener("click",()=>{
+const ans=document.getElementById("answer").value.trim();
+if(ans==="8"||ans==="8.0"){
+document.getElementById("result").textContent="✅ Correct! It should use '+' instead of '-'.";
+}else{
+document.getElementById("result").textContent="❌ Try again! Hint: Use the correct math operator.";
+}
+});
+</script>
+</body>
+</html>

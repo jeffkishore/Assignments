@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Photo Gallery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body{font-family:Arial;text-align:center;background:#f8f9fa;margin-top:40px}
+img{width:250px;height:180px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2)}
+button{margin:10px;padding:10px 20px;border:none;border-radius:5px;background:#007bff;color:white;cursor:pointer}
+button:hover{background:#0056b3}
+</style>
+</head>
+<body>
+<h3>📸 jQuery Photo Gallery</h3>
+<img id="galleryImage" src="https://via.placeholder.com/250x180?text=Image+1" alt="Gallery Image"><br>
+<button id="prevBtn">Previous</button>
+<button id="nextBtn">Next</button>
+<script>
+$(document).ready(function(){
+const images=[
+"https://via.placeholder.com/250x180?text=Image+1",
+"https://via.placeholder.com/250x180?text=Image+2",
+"https://via.placeholder.com/250x180?text=Image+3",
+"https://via.placeholder.com/250x180?text=Image+4"
+];
+let index=0;
+$("#nextBtn").click(function(){
+index=(index+1)%images.length;
+$("#galleryImage").fadeOut(300,function(){
+$(this).attr("src",images[index]).fadeIn(300);
+});
+});
+$("#prevBtn").click(function(){
+index=(index-1+images.length)%images.length;
+$("#galleryImage").fadeOut(300,function(){
+$(this).attr("src",images[index]).fadeIn(300);
+});
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Storage Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      color: #007bff;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🕒 Current Session Time</h2>
+  <p id="sessionTime"></p>
+
+  <script>
+    // Check if session time is already stored
+    let sessionStart = sessionStorage.getItem("sessionStart");
+
+    // If not stored, set current time as session start
+    if (!sessionStart) {
+      const now = new Date().toLocaleString(); // readable date/time
+      sessionStorage.setItem("sessionStart", now);
+      sessionStart = now;
+    }
+
+    // Display the stored session start time
+    document.getElementById("sessionTime").textContent = 
+      `Your current session started at: ${sessionStart}`;
+  </script>
+</body>
+</html>

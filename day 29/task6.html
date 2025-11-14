@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Info Card</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body{font-family:Arial;text-align:center;margin-top:40px;background:#f8f9fa}
+.card{width:300px;margin:auto;padding:15px;border-radius:10px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer}
+.details{display:none;margin-top:10px;color:#333}
+</style>
+</head>
+<body>
+<h3>💡 Click the Card to Expand/Collapse Info</h3>
+<div class="card" id="infoCard">
+<h4>🌍 About Earth</h4>
+<div class="details">
+<p>Earth is the third planet from the Sun and the only known planet to support life. It has one natural satellite, the Moon.</p>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$("#infoCard").click(function(){
+$(".details").slideToggle();
+});
+});
+</script>
+</body>
+</html>

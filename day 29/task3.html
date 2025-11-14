@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Image Visibility</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h3> Toggle Image Visibility</h3>
+<button id="toggleBtn">Toggle Image</button><br><br>
+<img id="myImage" src="https://via.placeholder.com/200" alt="Sample Image">
+<script>
+$(document).ready(function(){
+$("#toggleBtn").click(function(){
+$("#myImage").toggle();
+});
+});
+</script>
+</body>
+</html>

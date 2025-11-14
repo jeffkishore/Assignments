@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refactor JavaScript Example</title>
+</head>
+<body>
+<h3>🧹 Refactored Modular JavaScript</h3>
+<button id="runBtn">Run Program</button>
+<p id="output"></p>
+<script>
+function getAverage(marks){return marks.reduce((a,b)=>a+b,0)/marks.length;}
+function getGrade(avg){return avg>=90?"A":avg>=80?"B":"C";}
+function displayResult(name,marks){
+const avg=getAverage(marks);
+const grade=getGrade(avg);
+document.getElementById("output").textContent=`${name}'s average is ${avg.toFixed(2)} and grade is ${grade}`;
+}
+document.getElementById("runBtn").addEventListener("click",()=>{displayResult("Aarthi",[85,90,80]);});
+</script>
+</body>
+</html>

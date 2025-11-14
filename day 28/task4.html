@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read JSON Data</title>
+</head>
+<body>
+<h3>Read Data from localStorage</h3>
+<button id="readBtn">Read Data</button>
+<pre id="output"></pre>
+<script>
+document.getElementById("readBtn").addEventListener("click",()=>{
+const storedData=localStorage.getItem("userData");
+if(storedData){
+const parsedData=JSON.parse(storedData);
+console.log(parsedData);
+document.getElementById("output").textContent=`Name: ${parsedData.name}\nCourse: ${parsedData.course}\nYear: ${parsedData.year}`;
+}else{
+document.getElementById("output").textContent="No data found in localStorage.";
+}
+});
+</script>
+</body>
+</html>

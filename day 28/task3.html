@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object to JSON</title>
+</head>
+<body>
+<h3>Save Object to localStorage</h3>
+<button id="saveBtn">Save</button>
+<pre id="output"></pre>
+<script>
+document.getElementById("saveBtn").addEventListener("click",()=>{
+const user={name:"Aarthi",course:"Computer Science",year:2025};
+const jsonData=JSON.stringify(user);
+localStorage.setItem("userData",jsonData);
+const storedData=localStorage.getItem("userData");
+const parsedData=JSON.parse(storedData);
+document.getElementById("output").textContent=`Saved & Retrieved Object:\n${JSON.stringify(parsedData,null,2)}`;
+});
+</script>
+</body>
+</html>

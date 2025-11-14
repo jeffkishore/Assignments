@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Console Experiment</title>
+</head>
+<body>
+<h3>Open Console to Experiment</h3>
+<button id="testBtn">Run Console Demo</button>
+<script>
+document.getElementById("testBtn").addEventListener("click",()=>{
+const students=[
+{name:"Aarthi",course:"CS",year:2025},
+{name:"Vikram",course:"IT",year:2024},
+{name:"Divya",course:"AI",year:2026}
+];
+console.log("Student Data Logged:");
+console.log(students);
+console.table(students);
+debugger; // Use this line to pause at breakpoint in DevTools
+console.log("Code resumes after breakpoint.");
+});
+</script>
+</body>
+</html>
