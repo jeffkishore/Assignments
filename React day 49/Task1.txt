@@ -1,0 +1,5 @@
+Redux is a state management library for JavaScript apps.
+It stores the entire app state in a single central store.
+State can be changed only by dispatching actions.
+Reducers decide how the state updates based on actions.
+This makes data flow predictable and easier to debug.

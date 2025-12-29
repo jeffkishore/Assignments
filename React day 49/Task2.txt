@@ -1,0 +1,3 @@
+Store: Holds the entire application state in one central place.
+Action: A plain object that describes *what happened* (type + data).
+Reducer: A pure function that updates state based on the action.

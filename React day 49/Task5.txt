@@ -1,0 +1,5 @@
+User triggers an event in the UI.
+An action is dispatched to the store.
+The reducer receives the action and current state.
+A new updated state is returned by the reducer.
+The store updates and the UI re-renders with new state.
